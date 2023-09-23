@@ -8,7 +8,7 @@ public class OccupiedSquare extends Square {
 
     private final Piece piece;
 
-    public OccupiedSquare(final Position position, final Color color, final Piece piece) {
+    public OccupiedSquare(final int position, final Color color, final Piece piece) {
         super(position, color);
         this.piece = Objects.requireNonNull(piece, "piece must not be null");
     }

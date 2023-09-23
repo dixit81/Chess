@@ -4,19 +4,19 @@ import java.util.Objects;
 
 public class Move {
 
-    private final Position initialPosition;
-    private final Position newPosition;
+    private final int initialPosition;
+    private final int newPosition;
 
-    public Move(final Position initialPosition, final Position newPosition) {
-        this.initialPosition = Objects.requireNonNull(initialPosition, "initialPosition must not be null");
-        this.newPosition = Objects.requireNonNull(newPosition, "newPosition must not be null");
+    public Move(final int initialPosition, final int newPosition) {
+        this.initialPosition = initialPosition;
+        this.newPosition = newPosition;
     }
 
-    public Position getInitialPosition() {
+    public int getInitialPosition() {
         return initialPosition;
     }
 
-    public Position getNewPosition() {
+    public int getNewPosition() {
         return newPosition;
     }
 }

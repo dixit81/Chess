@@ -2,7 +2,6 @@ package com.example.demo;
 
 import com.example.demo.model.Color;
 import com.example.demo.model.EmptySquare;
-import com.example.demo.model.Position;
 import com.example.demo.model.Square;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,9 +22,9 @@ public class Board {
         for (int i = 0; i < ROW_LENGTH; i++) {
             for (int j = 0; j < COL_LENGTH; j++) {
                 if ((i + j) % 2 == 0) {
-                    squares[i][j] = new EmptySquare(new Position(i, j), Color.BLACK);
+                    squares[i][j] = new EmptySquare(i, Color.BLACK);
                 } else {
-                    squares[i][j] = new EmptySquare(new Position(i, j), Color.WHITE);
+                    squares[i][j] = new EmptySquare(j, Color.WHITE);
                 }
             }
         }
@@ -34,7 +33,7 @@ public class Board {
 
     }
 
-    public Square getSquare(final Position position) {
+    public Square getSquare(final int position) {
         return null;
     }
 }

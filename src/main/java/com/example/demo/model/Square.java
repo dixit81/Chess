@@ -7,16 +7,16 @@ import java.util.Objects;
 
 public abstract class Square {
 
-    private final Position position;
+    private final int position;
     private final Color color;
 
     @Autowired
-    public Square(final Position position, final Color color) {
-        this.position = Objects.requireNonNull(position, "position must not be null");
+    public Square(final int position, final Color color) {
+        this.position = position;
         this.color = Objects.requireNonNull(color, "color must not be null");
     }
 
-    public Position getPosition() {
+    public int getPosition() {
         return position;
     }
 
