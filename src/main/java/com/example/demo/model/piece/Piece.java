@@ -11,7 +11,6 @@ public abstract class Piece {
 
     private final int currentPosition;
     private final Color color;
-    private Board board;
 
     public Piece(final int currentPosition, final Color color) {
         this.currentPosition = currentPosition;
@@ -26,5 +25,5 @@ public abstract class Piece {
         return color;
     }
 
-    protected abstract Collection<Move> calculateValidMoves();
+    protected abstract Collection<Move> calculateValidMoves(final Board board);
 }

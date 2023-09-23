@@ -15,7 +15,7 @@ public abstract class Square {
     private static final Map<Integer, EmptySquare> EMPTY_TILES = createAllEmptyTiles();
 
     @Autowired
-    public Square(final int position) {
+    Square(final int position) {
         this.position = position;
     }
 
