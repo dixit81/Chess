@@ -1,10 +1,10 @@
-package com.example.demo.model;
+package com.example.demo.model.square;
 
 import com.example.demo.model.piece.Piece;
 
 public class EmptySquare extends Square {
-    public EmptySquare(final int position, final Color color) {
-        super(position, color);
+    EmptySquare(final int position) {
+        super(position);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.model.square;
 
 import com.example.demo.model.piece.Piece;
 
@@ -8,8 +8,8 @@ public class OccupiedSquare extends Square {
 
     private final Piece piece;
 
-    public OccupiedSquare(final int position, final Color color, final Piece piece) {
-        super(position, color);
+    OccupiedSquare(final int position, final Piece piece) {
+        super(position);
         this.piece = Objects.requireNonNull(piece, "piece must not be null");
     }
 

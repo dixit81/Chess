@@ -1,8 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.model.Color;
-import com.example.demo.model.EmptySquare;
-import com.example.demo.model.Square;
+import com.example.demo.model.square.Square;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,21 +14,6 @@ public class Board {
     @Autowired
     public Board(final Square[][] squares) {
         this.squares = squares;
-    }
-
-    public Board createBoard() {
-        for (int i = 0; i < ROW_LENGTH; i++) {
-            for (int j = 0; j < COL_LENGTH; j++) {
-                if ((i + j) % 2 == 0) {
-                    squares[i][j] = new EmptySquare(i, Color.BLACK);
-                } else {
-                    squares[i][j] = new EmptySquare(j, Color.WHITE);
-                }
-            }
-        }
-
-        return new Board(squares);
-
     }
 
     public Square getSquare(final int position) {
