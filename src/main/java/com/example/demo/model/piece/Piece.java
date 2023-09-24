@@ -26,4 +26,8 @@ public abstract class Piece {
     }
 
     protected abstract Collection<Move> calculateValidMoves(final Board board);
+
+    boolean isWithinBoardLimits(int newPosition) {
+        return 0 <= newPosition && 64 >= newPosition;
+    }
 }
